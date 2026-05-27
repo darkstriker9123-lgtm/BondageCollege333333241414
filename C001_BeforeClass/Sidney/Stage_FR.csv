@@ -26,8 +26,8 @@ Stage,LoveReq,SubReq,VarReq,Interaction,Result,NextStage,LoveMod,SubMod,Function
 110,0,0,,Ça ne m'intéresse pas.,Ok ! Peu importe.|(Elle ferme son sac.),20,-1,0,
 110,0,0,,C'est mal ! je vais|prévenir la professeur.,,40,-2,-1,Fight()
 200,0,0,BondageNotConfronted,Les cordes dépassaient|de ton sac.,Menteuse ! Rends-les moi.,200,0,0,ConfrontBondage()
-200,0,0,BondageNotConfronted,"Tu trimballes des cordes...|Ok, tu veux être ligotée !",(Elle rougit.) Non ! Pas du tout !|Rends-les moi. Maintenant !,200,0,1,ConfrontBondage()
-200,0,0,BondageNotConfronted,"Désolée. je les adore, |peux-tu me ligoter ?","Tu es pathétique, tu finiras par me lécher les bottes.|Maintenant ! Rends-les moi. (Elle te les prends.)",300,0,-2,GiveRope()
+200,0,0,BondageNotConfronted,"Tu trimballes des cordes...|Ok, tu veux être ligotée !",(Elle rougit.) Non ! Pas du tout !|Rends-les moi. Maintenant !,200,0,5,ConfrontBondage()
+200,0,0,BondageNotConfronted,"Désolée. je les adore, |peux-tu me ligoter ?","Tu es pathétique, tu finiras par me lécher les bottes.|Maintenant ! Rends-les moi. (Elle te les prends.)",300,0,-5,GiveRope()
 200,0,0,,Les voilà tes cordes. |Cache les mieux.,Ok ! Maintenant laisse-moi tranquille.|(Elle te les prends et se retourne.),300,1,0,GiveRope()
 200,0,0,,Discutons un peu plus.,Mmmh. Ok.|De quoi veux-tu me parler ?,200,0,0,StopRope()
 200,0,2,,(Tu la déshabilles|et la ligotes.)ADD_MINUTES:1,(Tu lui aggripes le poignet et l'attaches par derrière.|Elle se débat mais fini par capituler.),220,0,0,Tie()

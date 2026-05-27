@@ -26,8 +26,8 @@ Stage,LoveReq,SubReq,VarReq,Interaction,Result,NextStage,LoveMod,SubMod,Function
 110,0,0,,I'm not interested.,Fine!  I don't care.|(She closes the bag.),20,-1,0,
 110,0,0,,This is wrong!|I will tell the teacher.,,40,-2,-1,Fight()
 200,0,0,BondageNotConfronted,The ropes were hanging|loose from your bag.,Liar!  Give me my ropes back.,200,0,0,ConfrontBondage()
-200,0,0,BondageNotConfronted,"If you carry rope, it means|you want to be tied up.",(She blushes.)  No!  Not at all!|Now give me back my ropes.,200,0,1,ConfrontBondage()
-200,0,0,BondageNotConfronted,"I'm so sorry.  I love ropes,|could you tie me up?","You're pathetic, soon you will lick my boots.|Now give me my ropes. (She takes the ropes.)",300,0,-2,GiveRope()
+200,0,0,BondageNotConfronted,"If you carry rope, it means|you want to be tied up.",(She blushes.)  No!  Not at all!|Now give me back my ropes.,200,0,5,ConfrontBondage()
+200,0,0,BondageNotConfronted,"I'm so sorry.  I love ropes,|could you tie me up?","You're pathetic, soon you will lick my boots.|Now give me my ropes. (She takes the ropes.)",300,0,-5,GiveRope()
 200,0,0,,Here are your ropes. |Hide them better.,Good!  Now leave me alone.|(She takes the rope and turns around.),300,1,0,GiveRope()
 200,0,0,,Let's talk some more.,Mmmh.  Fine.|What were we talking about?,200,0,0,StopRope()
 200,0,2,,(Strip and tie her.)ADD_MINUTES:1,(You pin her again and tie her wrist behind her back.|She thrashes and kicks you but finally submits.),220,0,0,Tie()
