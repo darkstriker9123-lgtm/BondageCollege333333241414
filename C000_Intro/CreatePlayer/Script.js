@@ -35,7 +35,7 @@ function C000_Intro_CreatePlayer_Run() {
 		SelectSkill.setAttribute("ID", "SelectSkill");
 		SelectSkill.setAttribute("name", "SelectSkill");
 		SelectSkill.setAttribute("style", "font-size:24px; font-family:Arial; position:absolute; padding-left:10px; left:300px; top:330px; width:300px; height:50px;");
-		for(var S = 0; S <= 5; S++)
+		for (var S = 0; S <= 5; S++)
 			SelectSkill.appendChild(new Option(GetText("Skill" + S.toString()), S.toString()));
 		document.body.appendChild(SelectSkill);
 		C000_Intro_CreatePlayer_ControlLoaded = true;
@@ -58,7 +58,7 @@ function C000_Intro_CreatePlayer_Run() {
 function C000_Intro_CreatePlayer_Validate() {
 	var NewName = document.getElementById("InputName").value.trim();
 	var StartingSkill = document.getElementById("SelectSkill").value.trim();
-	var letters = /^[a-zA-Z ]+$/;
+	var letters = /^[\p{L} ]+$/u;
 	if (NewName.match(letters) && (NewName.length > 0) && (NewName.length <= 20)) {
 		if (StartingSkill == "1") PlayerAddSkill("Arts", 1);
 		if (StartingSkill == "2") PlayerAddSkill("Fighting", 1);
