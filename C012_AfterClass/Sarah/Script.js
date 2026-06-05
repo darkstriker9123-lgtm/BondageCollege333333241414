@@ -3,9 +3,9 @@ var C012_AfterClass_Sarah_IntroText = "";
 var C012_AfterClass_Sarah_HasEgg = false;
 var C012_AfterClass_Sarah_HasBelt = false;
 var C012_AfterClass_Sarah_ChatAvail = false;
-var	C012_AfterClass_Sarah_IsGagged = false;
-var	C012_AfterClass_Sarah_IsRoped = false;
-var	C012_AfterClass_Sarah_IsStrapped = false;
+var C012_AfterClass_Sarah_IsGagged = false;
+var C012_AfterClass_Sarah_IsRoped = false;
+var C012_AfterClass_Sarah_IsStrapped = false;
 var C012_AfterClass_Sarah_IsRestrained = false;
 var C012_AfterClass_Sarah_CanMasturbate = false;
 var C012_AfterClass_Sarah_PleasurePlayerAvail = false;
@@ -15,10 +15,11 @@ var C012_AfterClass_Sarah_PleasurePlayerSpeed = 0;
 var C012_AfterClass_Sarah_MasturbateCount = 0;
 var C012_AfterClass_Sarah_AllowSexAfterDate = false;
 var C012_AfterClass_Sarah_SidneyIsOwner = false;
+var C012_AfterClass_Sarah_SarahIsOwner = false;
 var C012_AfterClass_Sarah_CanKickOut = false;
 var C012_AfterClass_Sarah_HaveCuffs = false;
 var C012_AfterClass_Sarah_DateAmandaAvail = false;
-var	C012_AfterClass_Sarah_AllowDamsel = false;
+var C012_AfterClass_Sarah_AllowDamsel = false;
 var C012_AfterClass_Sarah_AllowHeroine = false;
 var C012_AfterClass_Sarah_BondageClubInvitationBySarah = false;
 var C012_AfterClass_Sarah_BondageClubInvitation = false;
@@ -57,8 +58,9 @@ function C012_AfterClass_Sarah_CalcParams() {
 	C012_AfterClass_Sarah_SexAvail = (!Common_PlayerRestrained && !Common_PlayerChaste && !GameLogQuery(CurrentChapter, "Player", "NextPossibleOrgasm") && !GameLogQuery(CurrentChapter, "Sarah", "NextPossibleOrgasm"));
 	if (GameLogQuery(CurrentChapter, "", "EventBlockChanging") && (C012_AfterClass_Dorm_Guest.indexOf(Common_PlayerOwner) >= 0) && !Common_PlayerNaked) C012_AfterClass_Sarah_SexAvail = false;
 	C012_AfterClass_Sarah_CanMasturbate = (!Common_PlayerRestrained && !C012_AfterClass_Sarah_HasBelt && (ActorGetValue(ActorCloth) == "Naked"));
-	C012_AfterClass_Sarah_CanKickOut = (!Common_ActorIsOwner && !Common_ActorIsLover);
+	C012_AfterClass_Sarah_CanKickOut = (!Common_ActorIsOwner && !Common_ActorIsLover && !C012_AfterClass_Sarah_SarahIsOwner);
 	C012_AfterClass_Sarah_SidneyIsOwner = (Common_PlayerOwner == "Sidney");
+	C012_AfterClass_Sarah_SarahIsOwner = (Common_PlayerOwner == "Sarah");
 	C012_AfterClass_Sarah_HaveCuffs = (PlayerHasInventory("Cuffs"));
 	C012_AfterClass_Sarah_DateAmandaAvail = (!GameLogQuery(CurrentChapter, CurrentActor, "DatingAmanda") && (Common_PlayerLover != "Amanda") && (Common_PlayerLover != "Sarah"));
 	C012_AfterClass_Sarah_AllowDamsel = (GameLogQuery("C008_DramaClass", "Player", "RoleVillain") || GameLogQuery("C008_DramaClass", "Player", "RoleHeroine"));
@@ -271,9 +273,12 @@ function C012_AfterClass_Sarah_TestDomme() {
 // Chapter 12 After Class - Sarah can become the player Mistress at -20 submission
 function C012_AfterClass_Sarah_TestSub() {
 	if (!ActorIsGagged()) {
-		if (Common_PlayerOwner != "")
-			OverridenIntroText = GetText("AlreadyOwned");
-		else
+		if (Common_PlayerOwner != "") {
+			if (C012_AfterClass_Sarah_SarahIsOwner)
+				OverridenIntroText = GetText("AlreadyOwnedBySarah");
+			else
+				OverridenIntroText = GetText("AlreadyOwned");
+		} else
 			C012_AfterClass_Sarah_CurrentStage = 300;
 	}
 	else C012_AfterClass_Sarah_GaggedAnswer();
@@ -509,7 +514,8 @@ function C012_AfterClass_Sarah_EndPleasureFromSarah(LoveFactor, SubFactor) {
 // Chapter 12 After Class - When the player kisses Sarah
 function C012_AfterClass_Sarah_Kiss() {
 	CurrentTime = CurrentTime + 50000;
-	if (Common_ActorIsOwner) OverridenIntroText = GetText("KissSarahOwner");
+	if (C012_AfterClass_Sarah_SarahIsOwner) OverridenIntroText = GetText("KissSarahMistress");
+	else if (Common_ActorIsOwner) OverridenIntroText = GetText("KissSarahOwner");
 	else if (C012_AfterClass_Sarah_IsGagged) OverridenIntroText = GetText("KissSarahGagged");
 	else if (!GameLogQuery(CurrentChapter, CurrentActor, "Kiss")) {
 		GameLogAdd("Kiss");

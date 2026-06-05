@@ -2,6 +2,7 @@ Stage,LoveReq,SubReq,VarReq,Interaction,Result,NextStage,LoveMod,SubMod,Function
 0,0,0,,We need to talk.,What would you like to talk about?,0,0,0,TestTalk()
 0,0,5,!Common_ActorIsOwned,You're into BDSM but|you're not owned?,"I'm not, I'm a free and a happy subbie.|(You need +20 submission to collar Sarah.)",0,0,0,TestDomme()
 0,0,-10,!BondageClubInvitationBySarah,Miss Sarah.|I admire you.,I think I know what you need girl.,0,0,0,TestSub()
+0,0,-10,SarahIsOwner,Mistress Sarah.|How can I serve you?,Good pet.  You know your place.,0,0,0,
 0,0,0,BondageClubInvitationBySarah,Are we going to the|Bondage Club now?,"(She checks the time.)  No, it's too early.|Let's do something else before we go.",0,0,0,TestBondageClub()
 0,0,0,Common_PlayerGagged,@Om nnnuoogn mh!,You're so cute with that gag.|Can I also have a gag?,0,0,0,TestUnbind()
 0,0,0,Common_PlayerRestrained,(Struggle in|your restraints.),You're adorable when you struggle.|I also love to be restrained.,0,0,0,TestUnbind()
@@ -26,6 +27,7 @@ Stage,LoveReq,SubReq,VarReq,Interaction,Result,NextStage,LoveMod,SubMod,Function
 20,0,0,Common_PlayerChaste,Can you please help|me with this belt?,I cannot help you.|I don't have the key.,0,0,0,
 20,0,0,Common_ActorIsLover,About our relationship...,Yes my sexy lover?|(She seems nervous.),190,0,0,
 20,0,0,,It's time for you|to leave my place.,You're expelling me from your dorm?,790,-1,1,
+20,0,0,SarahIsOwner,You cannot be|here Mistress.,"(She raises an eyebrow.)|I go where I please pet.  Kneel.",0,0,1,
 20,0,0,,Never mind.,Very well.  What would you like to do?,0,0,0,
 30,0,0,,Yes!  Let's go!|(Go to the club.),,30,0,0,EnterBondageClub()
 30,0,0,,"Not yet, let me|pack my stuff.","Ok, but be quick, we might|get punished if we're late.",0,0,0,
@@ -167,6 +169,8 @@ Stage,LoveReq,SubReq,VarReq,Interaction,Result,NextStage,LoveMod,SubMod,Function
 400,0,0,Common_PlayerRestrained,Can you help me|before you go?,I'm sure you will find help.|(She leaves your dorm.),410,0,0,
 400,0,0,!Common_ActorIsOwned,Have fun Sarah!,I will.  (She leaves your dorm.),410,0,0,
 400,0,0,Common_ActorIsOwned,Have fun my slave!,"I will Mistress, thanks!|(She leaves your dorm.)",410,0,1,
+400,0,0,SarahIsOwner,Yes Mistress Sarah.|(Stay and obey.),(You kneel obediently as she leaves.)|Good pet.  Wait for me here.,410,0,1,
+400,0,0,SarahIsOwner,Please let me come|too Mistress.,"(She shakes her head.)|No pet, you stay here.  Be a good girl.",410,-1,0,
 400,0,0,!Common_ActorIsOwned,That sucks!|Don't go.,I'll be back really soon.|(She leaves your dorm.),410,-1,0,
 400,0,0,!Common_ActorIsOwner,Have a great|time Sarah.,Hell yeah!  (She leaves your dorm.),410,1,0,
 400,0,0,!Common_ActorIsOwned,Wait!,"Sorry, I cannot wait.|(She leaves your dorm.)",410,0,0,

@@ -7,8 +7,10 @@ Stage,LoveReq,SubReq,VarReq,IntroText,Image
 0,10,0,Common_PlayerNaked,(She stares at you and smiles happily.)|You're so sexy when you're naked.,Dorm.jpg
 0,0,-10,Common_PlayerNaked,You're such a cute and kinky girl.,Dorm.jpg
 0,0,10,Common_PlayerNaked,(She avoids staring at you and blushes.)|You're so pretty when you're naked Miss.,Dorm.jpg
+0,0,0,SarahIsOwner,Good pet.  Staying naked as ordered.,Dorm.jpg
 0,0,0,Common_ActorIsLover,Hey sexy!  What could we do to have fun?,Dorm.jpg
 0,0,0,Common_ActorIsOwned,What could we do to have fun Mistress?,Dorm.jpg
+0,0,0,SarahIsOwner,My little pet.  Come here and kneel.,Dorm.jpg
 0,0,0,IsRoped,(She tugs on the ropes for fun.)|You're quite a rope artist.,Dorm.jpg
 0,0,0,IsStrapped,(She playfully struggles in the armbinder.)|I love this item!  It hugs me so tight.,Dorm.jpg
 0,0,0,IsGagged,Ooogn mnog!,Dorm.jpg
@@ -58,6 +60,7 @@ Stage,LoveReq,SubReq,VarReq,IntroText,Image
 400,0,0,,I'm going downtown.|I'll see you later.,Door.jpg
 400,0,0,Common_ActorIsLover,"Hey sexy, I need to go downtown.|I'll come back to sleep with you later.",Door.jpg
 400,0,0,Common_ActorIsOwned,"Mistress, I need to go downtown.|I hope to see you really soon.",Door.jpg
+400,0,0,SarahIsOwner,"Pet, I'm going out.|You will stay here and wait for me.",Door.jpg
 400,0,0,BondageClubInvitationBySarah,It's time to go to the Bondage Club.|Are you ready?  It will be fun.,Door.jpg
 401,0,0,,,Door.jpg
 402,0,0,,,Door.jpg
